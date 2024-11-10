@@ -16,7 +16,7 @@ jobs:
    - name: generate version from package.json
      run: |
       VERSION=$(node -p "require('./package.json').version")
-      echo "DEV_VERSION=${DEV_VERSION}" >> $GITHUB_ENV
+      echo "DEV_VERSION=${VERSION}" >> $GITHUB_ENV
 
  build:
   needs: dev
