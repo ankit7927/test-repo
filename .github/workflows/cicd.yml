@@ -12,7 +12,7 @@ jobs:
    - name: print me
      run: echo "hello, iam working on tag push"
    - name: checkout to version
-     run: actions/checkout@v4
+     uses: actions/checkout@v4
    - name: generate version from package.json
      run: |
       CURRENT_VERSION=$(node -p "require('./package.json').version")
