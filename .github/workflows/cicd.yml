@@ -2,7 +2,7 @@ name: "test cicd"
 
 on:
  push:
-  tag:
+  tags:
    - "*"
 
 jobs:
