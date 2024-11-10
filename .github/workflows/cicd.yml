@@ -1,0 +1,13 @@
+name: "test cicd"
+
+on:
+ push:
+  tag:
+   - "*"
+
+jobs:
+ dev:
+  runs-on: ubuntu-latest
+  steps:
+   - name: print me
+     run: echo "hello, iam working on tag push"
