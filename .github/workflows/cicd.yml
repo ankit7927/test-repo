@@ -11,3 +11,14 @@ jobs:
   steps:
    - name: print me
      run: echo "hello, iam working on tag push"
+   - name: generate version from package.json
+     run: |
+      CURRENT_VERSION=$(node -p "require('./package.json').version")
+      echo "CURRENT_VERSION=${CURRENT_VERSION}" >> $GITHUB_ENV
+
+ build:
+  needs: dev
+  runs-on: ubuntu-latest
+  setps: 
+   - name: print version generated in dev
+     run: echo ${{env.CURRENT_VERSION}}
