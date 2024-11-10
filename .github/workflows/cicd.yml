@@ -7,7 +7,7 @@ on:
 
 jobs:
  dev:
-  runs-on: ubuntu-latest
+  runs-on: ubuntu-latestz
   steps:
    - name: print me
      run: echo "hello, iam working on tag push"
@@ -19,6 +19,6 @@ jobs:
  build:
   needs: dev
   runs-on: ubuntu-latest
-  setps: 
+  steps: 
    - name: print version generated in dev
      run: echo ${{env.CURRENT_VERSION}}
